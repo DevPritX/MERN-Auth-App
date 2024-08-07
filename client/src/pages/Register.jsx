@@ -13,11 +13,12 @@ const Register = () => {
       password: passwordRef.current.value,
     };
     console.log(formData);
-    
+    localStorage.setItem("user", JSON.stringify(formData))
+
     // Clear Inputs
-    emailRef.current.value = ""
-    usernameRef.current.value = ""
-    passwordRef.current.value = ""
+    emailRef.current.value = "";
+    usernameRef.current.value = "";
+    passwordRef.current.value = "";
   };
   return (
     <form
