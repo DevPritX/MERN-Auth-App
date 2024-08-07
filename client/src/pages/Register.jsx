@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Navigate, redirect } from "react-router-dom";
 
 const Register = () => {
   const emailRef = useRef(null);
@@ -13,7 +14,7 @@ const Register = () => {
       password: passwordRef.current.value,
     };
     console.log(formData);
-    localStorage.setItem("user", JSON.stringify(formData))
+    localStorage.setItem("user", JSON.stringify(formData));
 
     // Clear Inputs
     emailRef.current.value = "";
@@ -23,7 +24,7 @@ const Register = () => {
   return (
     <form
       id="register"
-      className="mx-auto mt-5 p-5 w-[80%] h-auto flex flex-col gap-5 bg-green-500"
+      className="mx-auto mt-5 p-5 max-w-md h-auto flex flex-col gap-5 bg-green-500 rounded"
       onSubmit={registerDataHandler}
     >
       <h1 className="mx-auto text-white font-medium text-2xl">Register</h1>

@@ -4,8 +4,8 @@ const Home = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const dataObj = JSON.parse(localStorage.getItem("user"))
-    console.log(dataObj)
+    const dataObj = JSON.parse(localStorage.getItem("user"));
+    console.log(dataObj);
     setUser(dataObj);
   }, []);
 
